@@ -5,6 +5,7 @@ import Charlie from '../shared/audio/piano.mp3'
 import Fiesta from '../shared/audio/fiesta.mp3'
 import { Card, Image } from "semantic-ui-react";
 import Fade from 'react-reveal/Fade'; 
+import Footer from '../components/Footer'
 
 class Player extends Component {
   state = {
@@ -103,6 +104,7 @@ class Player extends Component {
       </Fade>
 
       </PlayContainer>
+      <Footer />
       </>
      );
   }

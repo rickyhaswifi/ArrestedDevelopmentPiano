@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { PlayContainer, PageContainer } from "../styled-components/PlayerStyles";
 import { Button, Divider, Form, Icon } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'; 
+import Footer from '../components/Footer';
 
 class HomeForm extends Component {
     state = { 
@@ -21,15 +22,18 @@ class HomeForm extends Component {
       <PlayContainer>
         <PageContainer>
       <Form size='massive'>
+      <Fade>
+        <h1>Hire Decision Maker</h1>
+      </Fade>
         <Fade left>
         <Form.Group widths='equal'>
         <Form.Input
         value={FullName}
         required
-        label='Enter your name'
+        label='Enter Your Name'
         name='FullName'
         control='input'
-        placeholder='Full name'
+        placeholder='George Michael'
         onChange={this.handleChange}
         />
        
@@ -39,7 +43,7 @@ class HomeForm extends Component {
         label='Enter your email'
         name='Email'
         control='input'
-        placeholder='email'
+        placeholder='info@fakeblock.com'
         onChange={this.handleChange}
         />
         </Form.Group>
@@ -57,6 +61,7 @@ class HomeForm extends Component {
      
         </PageContainer>
       </PlayContainer>
+    <Footer />
       </>
      );
   }
