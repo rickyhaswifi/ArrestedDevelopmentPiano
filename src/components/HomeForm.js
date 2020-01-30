@@ -23,7 +23,7 @@ class HomeForm extends Component {
         <PageContainer>
       <Form size='massive'>
       <Fade>
-        <h1>Hire Decision Maker</h1>
+        <h1>Hire Decision Generator</h1>
       </Fade>
         <Fade left>
         <Form.Group widths='equal'>
@@ -33,7 +33,7 @@ class HomeForm extends Component {
         label='Enter Your Name'
         name='FullName'
         control='input'
-        placeholder='George Michael'
+        placeholder='George Maharris'
         onChange={this.handleChange}
         />
        
@@ -58,7 +58,9 @@ class HomeForm extends Component {
         </Fade>
         <Divider hidden />
       </Form>
-     
+     <p>
+       Fill out the form & send the next page to the company you applied at.
+     </p>
         </PageContainer>
       </PlayContainer>
     <Footer />
