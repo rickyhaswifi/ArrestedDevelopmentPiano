@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
+import {BrowserRouter} from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(
-<App />
+  <BrowserRouter>
+      <App/>
+  </BrowserRouter>
 , document.getElementById('piano')
 );
 

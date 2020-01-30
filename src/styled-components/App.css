@@ -1,10 +1,15 @@
 body{
   margin: 0;
+  padding: 0;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 
-h1, button{
-  font-family: 'Fredoka One', cursive;
+h1, button, h2{
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.ui.button.primary{
+  background-color: #2F2D78 !important;
 }
