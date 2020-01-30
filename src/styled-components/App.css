@@ -6,8 +6,20 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 
+.ui.card{
+  z-index: 8 !important;
+  position: absolute !important;
+  width: 300px !important;
+  top: 0;
+  left: 0;
+}
+
 h1, button, h2{
   font-family: 'Fredoka One', cursive !important;
+}
+
+h2, .header{
+  text-transform: capitalize !important;
 }
 
 .ui.button.primary{

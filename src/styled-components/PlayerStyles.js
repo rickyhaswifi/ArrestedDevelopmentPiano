@@ -25,6 +25,10 @@ display:inline-block;
 text-align:center;
 `;
 
+export const EmailLink = styled.a`
+color: #2F2D78;
+`;
+
 export const PlayPassButton = styled.button`
 margin:25px !important;
   height: 250px;

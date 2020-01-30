@@ -1,47 +1,60 @@
 import React, { Component } from 'react';
 import { PlayContainer, PageContainer } from "../styled-components/PlayerStyles";
 import { Button, Divider, Form, Icon } from 'semantic-ui-react'
+import Fade from 'react-reveal/Fade'; 
 
 class HomeForm extends Component {
     state = { 
-      FullName: ''
+      FullName: '',
+      Email: ''
      }
-  
-    handleNameChange = (e) => {
-    console.log(e.target.value)
-    this.setState({
-      FullName:e.target.value
-    })
+
+    handleChange = (e) => {
+      const { name, value } = e.target
+      this.setState({ [name]: value })
     }
 
-    // handleNameSubmit = (e) => {
-      
-    // }
-
   render() { 
-    const {FullName} = this.state
+    const {FullName, Email} = this.state
     return ( 
       <>
       <PlayContainer>
         <PageContainer>
-      <Form size='massive' onSubmit={this.handleNameSubmit}>
+      <Form size='massive'>
+        <Fade left>
         <Form.Group widths='equal'>
-          <Form.Field
-            value={FullName}
-            label='Enter your name'
-            control='input'
-            placeholder='Full name'
-            onChange={this.handleNameChange}
-          />
+        <Form.Input
+        value={FullName}
+        required
+        label='Enter your name'
+        name='FullName'
+        control='input'
+        placeholder='Full name'
+        onChange={this.handleChange}
+        />
+       
+        <Form.Input
+        required
+        value={Email}
+        label='Enter your email'
+        name='Email'
+        control='input'
+        placeholder='email'
+        onChange={this.handleChange}
+        />
         </Form.Group>
-        <Button animated fluid primary href={FullName}>
-      <Button.Content visible>Submit</Button.Content>
-      <Button.Content hidden>
+        </Fade>
+        <Fade right>
+        <Button animated fluid primary href={"/" + FullName + "/" + Email }>
+        <Button.Content visible>Submit</Button.Content>
+        <Button.Content hidden>
         <Icon name='arrow right' />
-      </Button.Content>
-    </Button>
+        </Button.Content>
+        </Button>
+        </Fade>
         <Divider hidden />
       </Form>
+     
         </PageContainer>
       </PlayContainer>
       </>

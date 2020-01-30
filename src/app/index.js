@@ -6,12 +6,13 @@ import {Switch, Route, useParams } from 'react-router-dom';
 
 function Name() {
 
-  let { id } = useParams();
+  let { id, email } = useParams();
 
   return (
     <>
     <Player 
     name={id}
+    email={email}
     />
     </>
   );
@@ -23,7 +24,7 @@ class App extends Component {
       <>
       <Switch>
       <Route exact path="/" component={HomeForm} />
-      <Route exact path="/:id" component={Player} children={<Name />} />
+      <Route exact path="/:id/:email" component={Player} children={<Name />} />
       </Switch>
       </>
     )

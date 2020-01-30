@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import { PlayContainer, PlayPassButton, NameContainer,
-   PlayAcceptButton, ButtonContainer } from "../styled-components/PlayerStyles";
+   PlayAcceptButton, ButtonContainer, EmailLink } from "../styled-components/PlayerStyles";
 import Charlie from '../shared/audio/piano.mp3'
 import Fiesta from '../shared/audio/fiesta.mp3'
+import { Card, Image } from "semantic-ui-react";
+import Fade from 'react-reveal/Fade'; 
 
 class Player extends Component {
   state = {
@@ -19,7 +21,7 @@ class Player extends Component {
 
   render() { 
     const {isPlaying, isFiestaPlaying} = this.state
-    const {name} = this.props
+    const {name, email} = this.props
 
       this.sound = () => {
         if (isPlaying) {
@@ -50,25 +52,55 @@ class Player extends Component {
     return ( 
       <>
       <PlayContainer>
+        
+        <Fade down>
         <NameContainer>
         <h1>
         HIRE OR PASS:
         </h1>
           <h2>{name}</h2>
         </NameContainer>
-      <ButtonContainer>
-        <PlayAcceptButton
-        onClick={this.Fiestasound}
-        >
-        {isFiestaPlaying ? 'Pause' : 'Hire'}
-        </PlayAcceptButton>
+        </Fade>
 
-        <PlayPassButton
-        onClick={this.sound}
-        >
-        {isPlaying ? 'Pause' : 'Pass'}
-        </PlayPassButton>
+        <Card
+      style={{ display: isFiestaPlaying ? '' : 'none' }}
+      >
+      <Image src='http://clipart-library.com/images/pcqrzpbzi.jpg'></Image>
+      <Card.Content>
+      <Card.Header>Name: {name}</Card.Header>
+      <Card.Description>
+      Email: <EmailLink href={"mailto:" +email}>{email}</EmailLink>
+      </Card.Description>
+      </Card.Content>
+      </Card>
+
+      <Card
+      style={{ display: isPlaying ? '' : 'none' }}
+      >
+        <Image src='https://thumbs.gfycat.com/DishonestSecondFawn-size_restricted.gif'></Image>
+      <Card.Content>
+      <Card.Header>Name: {name}</Card.Header>
+      <Card.Description>
+      Email: <EmailLink href={"mailto:" +email}>{email}</EmailLink>
+      </Card.Description>
+      </Card.Content>
+      </Card>
+      
+      <Fade left>
+      <ButtonContainer>
+      <PlayAcceptButton
+      onClick={this.Fiestasound}
+      >
+      {isFiestaPlaying ? 'Pause' : 'Hire'}
+      </PlayAcceptButton>
+
+      <PlayPassButton
+      onClick={this.sound}
+      >
+      {isPlaying ? 'Pause' : 'Pass'}
+      </PlayPassButton>
       </ButtonContainer>
+      </Fade>
 
       </PlayContainer>
       </>
