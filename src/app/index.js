@@ -4,6 +4,7 @@ import HomeForm from "../components/HomeForm";
 import "../styled-components/App.css";
 import {Switch, Route, useParams } from 'react-router-dom';
 import { Grid, Card, Image, Header, Icon, Menu, Segment, Sidebar  } from "semantic-ui-react";
+import { white } from 'ansi-colors';
 
 function Name() {
 
@@ -59,6 +60,10 @@ class App extends Component {
    <Header as='h4' color='grey'>
    by Ricardo Bautista
    </Header>
+      <a href='/George%20Maharis/info@fakeblock.com'>Example Page</a>
+      <p style={{color:'white', padding:'2em'}}>
+        Send your generated link in with your job application to give a fun Hire/Pass interaction for the company with your contact info.
+      </p>
     </Sidebar>
 
     <Sidebar.Pusher>
