@@ -23,7 +23,7 @@ class HomeForm extends Component {
         <PageContainer>
       <Form size='massive'>
       <Fade>
-        <h1>Hire Decision Generator</h1>
+        <h1><Icon name='hand peace' size='large'/> Hire Decision Generator</h1>
       </Fade>
         <Fade left>
         <Form.Group widths='equal'>

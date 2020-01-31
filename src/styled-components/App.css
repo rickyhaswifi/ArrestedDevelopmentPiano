@@ -23,3 +23,11 @@ h2, .header{
 .ui.button.primary{
   background-color: #2F2D78 !important;
 }
+
+.ui.sidebar {
+  color:white!important;
+}
+
+.ui.sidebar a{
+  color: #F16808 !important;
+}

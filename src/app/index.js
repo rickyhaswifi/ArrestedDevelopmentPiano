@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Player from "../components/player";
 import HomeForm from "../components/HomeForm";
+import MenuCredits from "../components/MenuCredits";
 import "../styled-components/App.css";
 import {Switch, Route, useParams } from 'react-router-dom';
-import { Grid, Card, Image, Header, Icon, Menu, Segment, Sidebar  } from "semantic-ui-react";
-import { white } from 'ansi-colors';
+import { Header, Icon, Menu, Sidebar  } from "semantic-ui-react";
 
 function Name() {
 
@@ -39,7 +39,7 @@ class App extends Component {
           onClick={this.toggleSidebar}
           position='right'
         >
-          <Icon name='hand peace' size='large'/>
+          <Icon name={visible ? 'close' : 'hand peace'}/>
         </Menu.Item>
       </Menu>
       <Sidebar.Pushable as={Route}>
@@ -49,13 +49,13 @@ class App extends Component {
       icon='labeled'
       inverted
       vertical
+      onHide={() => this.setState({visible: false})}
       visible = {visible}
       width='wide'
     >
-   {/* CONTENT GOES HERE */}
    <br/>
    <Header as='h2' color='grey'>
-   Hire Decision Generator
+   <Icon name='hand peace' size='large'/> Hire Decision Generator
    </Header>
    <Header as='h4' color='grey'>
    by Ricardo Bautista
@@ -64,6 +64,7 @@ class App extends Component {
       <p style={{color:'white', padding:'2em'}}>
         Send your generated link in with your job application to give a fun Hire/Pass interaction for the company with your contact info.
       </p>
+      <MenuCredits />
     </Sidebar>
 
     <Sidebar.Pusher>
