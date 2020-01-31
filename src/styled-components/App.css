@@ -9,7 +9,7 @@ body{
 
 .ui.card{
   margin: auto !important;
-  width: 80% !important;
+  margin-top:2em !important;
 }
 
 h1, button, h2, label, input{

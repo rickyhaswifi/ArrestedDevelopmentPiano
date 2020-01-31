@@ -6,13 +6,12 @@ export const PlayContainer = styled.section`
   background-color: #F16808;
 `;
 export const PageContainer = styled.section`
-  padding-top:10%;
+  padding-top:5%;
   width: 90%;
   margin:auto;
 `;
 
 export const NameContainer = styled.section`
-  padding-top:10%;
   font-size:2.5em;
   text-align:center;
 `;
