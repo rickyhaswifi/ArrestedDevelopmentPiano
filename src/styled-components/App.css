@@ -1,20 +1,18 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: #F16808 !important;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 
 .ui.card{
-  z-index: 8 !important;
-  position: absolute !important;
-  width: 300px !important;
-  top: 0;
-  left: 0;
+  margin: auto !important;
+  width: 80% !important;
 }
 
-h1, button, h2{
+h1, button, h2, label, input{
   font-family: 'Fredoka One', cursive !important;
 }
 

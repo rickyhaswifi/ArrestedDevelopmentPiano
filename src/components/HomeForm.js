@@ -33,7 +33,7 @@ class HomeForm extends Component {
         label='Enter Your Name'
         name='FullName'
         control='input'
-        placeholder='George Maharris'
+        placeholder='George Maharis'
         onChange={this.handleChange}
         />
        

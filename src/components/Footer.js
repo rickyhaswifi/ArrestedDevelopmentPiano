@@ -18,7 +18,7 @@ class Footer extends Component {
         <a href='/'>Make your own</a>
       </p>
       <p>
-    &copy; {this.state.date} <a href='https://ricardobautista.netlify.com/' target="_blank">Ricardo Bautista</a>
+    &copy; {this.state.date} <a href='https://ricardobautista.netlify.com/' target="_blank" rel="noopener noreferrer">Ricardo Bautista</a>
       </p>
     </FooterContainer>
     </>

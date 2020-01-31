@@ -3,9 +3,9 @@ import { PlayContainer, PlayPassButton, NameContainer,
    PlayAcceptButton, ButtonContainer, EmailLink } from "../styled-components/PlayerStyles";
 import Charlie from '../shared/audio/piano.mp3'
 import Fiesta from '../shared/audio/fiesta.mp3'
-import { Card, Image } from "semantic-ui-react";
+import { Grid, Card, Image } from "semantic-ui-react";
 import Fade from 'react-reveal/Fade'; 
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 class Player extends Component {
   state = {
@@ -63,7 +63,36 @@ class Player extends Component {
         </NameContainer>
         </Fade>
 
-        <Card
+<Grid columns={2}>
+  <Grid.Row>
+    <Grid.Column>
+    <Fade left>
+      <ButtonContainer>
+      <PlayAcceptButton
+      onClick={this.Fiestasound}
+      >
+      {isFiestaPlaying ? 'Pause' : 'Hire'}
+      </PlayAcceptButton>
+      </ButtonContainer>
+      </Fade>
+
+    </Grid.Column>
+    <Grid.Column>
+    <Fade right>
+      <ButtonContainer>
+      <PlayPassButton
+      onClick={this.sound}
+      >
+      {isPlaying ? 'Pause' : 'Pass'}
+      </PlayPassButton>
+      </ButtonContainer>
+      </Fade>
+
+    </Grid.Column>
+  </Grid.Row>
+</Grid>
+     
+      <Card
       style={{ display: isFiestaPlaying ? '' : 'none' }}
       >
       <Image src='http://clipart-library.com/images/pcqrzpbzi.jpg'></Image>
@@ -87,21 +116,6 @@ class Player extends Component {
       </Card.Content>
       </Card>
       
-      <Fade left>
-      <ButtonContainer>
-      <PlayAcceptButton
-      onClick={this.Fiestasound}
-      >
-      {isFiestaPlaying ? 'Pause' : 'Hire'}
-      </PlayAcceptButton>
-
-      <PlayPassButton
-      onClick={this.sound}
-      >
-      {isPlaying ? 'Pause' : 'Pass'}
-      </PlayPassButton>
-      </ButtonContainer>
-      </Fade>
 
       </PlayContainer>
       <Footer />
