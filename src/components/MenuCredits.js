@@ -9,7 +9,7 @@ class MenuCredits extends Component {
   
 
   componentDidMount(){
-    fetch("http://www.omdbapi.com/?t=Arrested+development&apikey=fe08c629")
+    fetch("http://www.omdbapi.com/?t=Arrested+development&apikey=" + process.env.REACT_APP_API_KEY)
     .then(res => res.json())
     .then(data => {
       this.setState({ arrested: data })
@@ -19,7 +19,7 @@ class MenuCredits extends Component {
     console.log(err)
     })
 
-    fetch("http://www.omdbapi.com/?t=Dora+the+explorer&apikey=fe08c629")
+    fetch("http://www.omdbapi.com/?t=Dora+the+explorer&apikey=" + process.env.REACT_APP_API_KEY)
     .then(res => res.json())
     .then(data => {
       this.setState({ dora: data })
