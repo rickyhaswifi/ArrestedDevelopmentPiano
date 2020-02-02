@@ -39,13 +39,13 @@ class MenuCredits extends Component {
       <h2>
       {arrested.Title}
       </h2>
-      <img src={arrested.Poster}></img>
+      <img alt='poster' src={arrested.Poster}></img>
       <p>
       <hr />
       <h2>
       {dora.Title}
       </h2>
-      <img src={dora.Poster}></img>
+      <img alt='poster' src={dora.Poster}></img>
       <p></p>
       API Courtesty of: <a target="_blank" rel="noopener noreferrer" href="http://www.omdbapi.com">www.omdbapi.com</a>
       </p>
