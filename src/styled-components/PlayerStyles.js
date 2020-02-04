@@ -29,19 +29,19 @@ export const EmailLink = styled.a`
 
 export const PlayPassButton = styled.button`
  @media (max-width: 769px) {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
+  font-size:2em;
 }
 
 @media (min-width: 769px) {
   width:350px;
   height:350px;
+  font-size:3em;
 }
-  margin:15px !important;
   border-radius:50%;
   background-color: #2F2D78;
   color: white;
-  font-size:3em;
   &:hover, &:focus{
     background-color: #2F2DAC;
   }
@@ -51,20 +51,19 @@ export const PlayPassButton = styled.button`
 export const PlayAcceptButton = styled.button`
 
 @media (max-width: 769px) {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
+  font-size:2em;
 }
 
 @media (min-width: 769px) {
   width:350px;
   height:350px;
+  font-size:3em;
 }
-
-  margin:15px !important;
   border-radius:50%;
   background-color: #2D7830;
   color: white;
-  font-size:3em;
   &:hover, &:focus{
     background-color: #2A9C2F;
 }

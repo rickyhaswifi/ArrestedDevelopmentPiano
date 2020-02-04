@@ -9,7 +9,7 @@ class MenuCredits extends Component {
   
 
   componentDidMount(){
-    fetch("http://www.omdbapi.com/?t=Arrested+development&apikey=" + process.env.REACT_APP_API_KEY)
+    fetch("http://www.omdbapi.com/?t=Charlie+brown&apikey=" + process.env.REACT_APP_API_KEY)
     .then(res => res.json())
     .then(data => {
       this.setState({ arrested: data })
