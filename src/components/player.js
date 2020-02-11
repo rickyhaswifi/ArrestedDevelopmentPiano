@@ -5,6 +5,8 @@ PlayAcceptButton, ButtonContainer, EmailLink }
 from "../styled-components/PlayerStyles";
 import Charlie from '../shared/audio/piano.mp3'
 import Fiesta from '../shared/audio/fiesta.mp3'
+import Bugs from '../shared/images/trio.jpg'
+import Walk from '../shared/images/walk.gif'
 import { Grid, Card, Image} from "semantic-ui-react";
 import Fade from 'react-reveal/Fade'; 
 import Footer from '../components/Footer';
@@ -27,12 +29,10 @@ class Player extends Component {
 
       this.sound = () => {
         if (isPlaying) {
-            console.log("pause");
             this.setState({ isPlaying: false });
             this.piano.pause();
             this.piano.currentTime = 0;
         } else {
-            console.log("play")
             this.setState({ isPlaying: true });
             this.piano.play(); 
         }
@@ -40,12 +40,10 @@ class Player extends Component {
 
       this.Fiestasound = () => {
         if (isFiestaPlaying) {
-            console.log("pause");
             this.setState({ isFiestaPlaying: false });
             this.fiesta.pause();
             this.fiesta.currentTime = 0;
         } else {
-            console.log("play")
             this.setState({ isFiestaPlaying: true });
             this.fiesta.play(); 
         }
@@ -95,7 +93,7 @@ class Player extends Component {
       <Card
       style={{ display: isFiestaPlaying ? '' : 'none' }}
       >
-      <Image src='http://clipart-library.com/images/pcqrzpbzi.jpg'></Image>
+      <Image src={Bugs}></Image>
       <Card.Content>
       <Card.Header>Name: {name}</Card.Header>
       <Card.Description>
@@ -107,7 +105,7 @@ class Player extends Component {
       <Card
       style={{ display: isPlaying ? '' : 'none' }}
       >
-      <Image src='https://thumbs.gfycat.com/DishonestSecondFawn-size_restricted.gif'></Image>
+      <Image src={Walk}></Image>
       <Card.Content>
       <Card.Header>Name: {name}</Card.Header>
       <Card.Description>

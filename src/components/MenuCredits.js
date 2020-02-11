@@ -13,7 +13,6 @@ class MenuCredits extends Component {
     .then(res => res.json())
     .then(data => {
       this.setState({ arrested: data })
-    console.log(data.Title)
     })
     .catch(err => {
     console.log(err)
@@ -52,6 +51,7 @@ class MenuCredits extends Component {
       <br />
       <a target="_blank" rel="noopener noreferrer" href='https://github.com/rickyhaswifi/ArrestedDevelopmentPiano'>
       <Icon name='github square' size='large'></Icon></a>
+      <br />
       <br />
       </>
      );
