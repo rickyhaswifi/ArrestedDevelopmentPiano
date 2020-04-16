@@ -35,6 +35,9 @@ class Player extends Component {
         } else {
             this.setState({ isPlaying: true });
             this.piano.play(); 
+            this.fiesta.pause();
+            this.fiesta.currentTime = 0;
+            this.setState({ isFiestaPlaying: false });
         }
       }  
 
@@ -46,6 +49,9 @@ class Player extends Component {
         } else {
             this.setState({ isFiestaPlaying: true });
             this.fiesta.play(); 
+            this.piano.pause();
+            this.piano.currentTime = 0;
+            this.setState({ isPlaying: false });
         }
       }  
 
@@ -95,7 +101,7 @@ class Player extends Component {
       >
       <Image src={Bugs}></Image>
       <Card.Content>
-      <Card.Header>Name: {name}</Card.Header>
+      <Card.Header>Give {name} great news they are hired!</Card.Header>
       <Card.Description>
       Email: <EmailLink href={"mailto:" + email}>{email}</EmailLink>
       </Card.Description>
@@ -107,7 +113,7 @@ class Player extends Component {
       >
       <Image src={Walk}></Image>
       <Card.Content>
-      <Card.Header>Name: {name}</Card.Header>
+      <Card.Header>Let {name} know they didn't get the position</Card.Header>
       <Card.Description>
       Email: <EmailLink href={"mailto:" + email}>{email}</EmailLink>
       </Card.Description>
